@@ -1,0 +1,144 @@
+
+
+body
+{
+	font-size:       62.5%; 
+	margin:          0;
+	padding:         0;
+	background-color: #000;
+	font-family:     'lucida grande', arial, tahoma, sans-serif;
+}
+
+#container
+{
+	margin:          0 ;
+	padding-top:	 5px;
+	width:           100%;
+	position:        relative;
+	background-color:  #333;
+}
+
+#header
+{
+	*margin:          0 ;
+	margin-top: 	 75px;
+	width:           100%;
+	height:          400px;
+	background:      transparent url('header.jpg') top no-repeat;
+	background-size: 100%
+}
+
+nav#headtitle h4 
+{
+	padding:0;
+	border-bottom: 1px solid #333;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+nav#headtitle h3
+{
+	padding:0;
+	border-bottom: 1px solid #333;
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+nav#headtitle h4 a,
+nav#headtitle h3 a
+{
+	color: #ccc;
+	position: relative;
+	display: block;
+	font-size: 30px;
+	padding: 5px 30px;
+	text-align: left;
+	font-weight: bold;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+	border-style: double;
+
+}
+
+
+#content
+{
+	min-height:      450px;
+	width:           100%;
+	margin:          0 auto;
+	background-color:#FDFDFD;
+}
+
+#insidecontent
+{
+	float:           left;
+	margin-top: 	50px;
+	padding-left:    25px;
+	padding-right:    25px;
+	width:           auto;
+}
+
+#insidecontent p
+{
+	margin:          0;
+	color:           #767676;
+	font-family:     Tahoma;
+	font-size:       1.8em;
+	line-height:     170%;
+}
+
+
+
+
+h1
+{
+	margin:          0;
+	font-weight:     normal;
+	color:           #6A7919;
+	font-size:       2.5em;
+	font-family:Times;
+}
+
+h2
+{
+	margin:          0;
+	display:         inline;
+	position:        relative;
+	top:             -1.5em;
+	left:            2em;
+	font-size:       1.8em;
+	font-weight:     normal;
+	color:           #94c258;
+}
+
+h3
+{
+	margin:          0;
+	font-size:       1.5em;
+	font-weight:     normal;
+	color:           #94C258;
+}
+
+#footer
+{
+	margin:          0 auto;
+	width:           641px;
+	height:          39px;
+	text-align: 	center;
+
+}
+
+#footer span
+{
+	display:         block;
+	position:        relative;
+	font-family:    Tahoma;
+	font-size:       1.2em;
+	padding:         10px;
+	color:           #767676;
+}
+
+
+

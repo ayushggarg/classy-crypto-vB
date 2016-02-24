@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>eNdE</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='ende.css') }}" type="text/css" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+
+<body>
+	<section id="body" class="width">
+		<aside id="sidebar" class="column-left">
+
+		<header>
+			<h1><a href="{{ url_for("eNdE") }}">eNdE</a></h1>
+			<h2>Welcome to my website!</h2>	
+		</header>
+
+		<nav id="mainnav">
+			<ul>
+        		<li class="selected-item"><a href="{{ url_for("eNdE") }}">Home</a></li>
+           		<li><a href="{{ url_for("CaesarCipher") }}">Caesar Cipher</a></li>
+           		<li><a href="{{ url_for("ReverseCipher") }}">Reverse Cipher</a></li>
+        		<li><a href="{{ url_for("TranspositionCipher") }}">Transposition Cipher</a></li>
+        		
+        	</ul>
+		</nav>
+
+		</aside>
+		<section id="content" class="column-right">
+
+		<article>
+			<h2>Encrypting/Decrypting</h2>
+			<br><br>
+			<blockquote><p>Encryption is the process of encoding messages or information in such a way that only authorized parties can read it. Encryption does not of itself prevent interception, but denies the message content to the interceptor. In an encryption scheme, the intended communication information or message, referred to as plaintext, is encrypted using an encryption algorithm, generating ciphertext that can only be read if decrypted. <br> The purpose of encryption is, to ensure that only somebody who is qualified to access data will be able to read it, using the decryption key. Somebody who is not qualified to access the information can be excluded from doing that, because he does not have the required decryption key. Without it, it's impossible to read the encrypted information.</p></blockquote>
+
+			<blockquote><p>Decryption is the process of taking encoded or encrypted text or other data and converting it back into text that you or the computer can read and understand. This term could be used to describe a method of un-encrypting the data manually or with un-encrypting the data using the proper codes or keys.</p></blockquote>
+		</article>
+		
+		<footer class="clear">
+			<p></p>
+		</footer>
+
+	</section>
+
+		<div class="clear"></div>
+
+	</section>
+	
+
+</body>
+</html>
