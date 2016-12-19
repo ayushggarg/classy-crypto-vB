@@ -28,6 +28,30 @@ body
 	background-size: 100%
 }
 
+nav#headtitle h5 
+{
+	padding:0;
+	border-bottom: 1px solid #333;
+	margin-top: 0px;
+	margin-left: 540px;
+	margin-right: 540px;
+}
+
+nav#headtitle h5 a
+{
+	color: black;
+	position: relative;
+	display: block;
+	font-size: 30px;
+	padding: 5px 10px;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+	border-style: double;
+
+}
+
 nav#headtitle h4 
 {
 	padding:0;
@@ -62,10 +86,9 @@ nav#headtitle h3 a
 
 }
 
-
 #content
 {
-	min-height:      450px;
+	min-height:      500px;
 	width:           100%;
 	margin:          0 auto;
 	background-color:#FDFDFD;
@@ -139,6 +162,3 @@ h3
 	padding:         10px;
 	color:           #767676;
 }
-
-
-
