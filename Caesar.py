@@ -1,7 +1,5 @@
 def Caesar(message, mode, key):
-	#message = 'This is my secret message.'
 	key = int(key)
-	#mode = 'encrypt'
 	LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 	translated = ''
 	message = message.upper()
@@ -16,4 +14,5 @@ def Caesar(message, mode, key):
 			translated = translated + LETTERS[num]
 		else:
 			translated = translated + symbol
+	translated = translated.lower()
 	return (translated)
