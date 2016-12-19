@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-	<title>Caesar Cipher</title>
+	<title>Affine Cipher</title>
 	<link rel="stylesheet" href="{{ url_for('static',filename='ende.css') }}" type="text/css" type="text/css" />
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
@@ -13,23 +13,22 @@
 
 		<header>
 			<h1><a href="{{ url_for("eNdE") }}">eNdE</a></h1>
-			<h2>Welcome to my website!</h2>	
+			<h2>Welcome to my website!</h2>
 		</header>
 
 		<nav id="mainnav">
 			<ul>
         		<li><a href="{{ url_for("FrequencyAnalysis") }}">Frequency Analysis</a></li>
-        		<li><a href="{{ url_for("AffineCipher") }}">Affine Cipher</a></li>
+        		<li class="selected-item"><a href="{{ url_for("AffineCipher") }}">Affine Cipher</a></li>
         		<li><a href="{{ url_for("AtbashCipher") }}">Atbash</a></li>
         		<li><a href="{{ url_for("BaseCipher") }}">Base64</a></li>
-           		<li class="selected-item"><a href="{{ url_for("CaesarCipher") }}">Caesar Cipher</a></li>
+           		<li><a href="{{ url_for("CaesarCipher") }}">Caesar Cipher</a></li>
            		<li><a href="{{ url_for("LetterCipher") }}">Letter Number</a></li>
            		<li><a href="{{ url_for("MorseCipher") }}">Morse Code</a></li>
            		<li><a href="{{ url_for("OTPCipher") }}">One Time Pad</a></li>
            		<li><a href="{{ url_for("ReverseCipher") }}">Reverse Cipher</a></li>
         		<li><a href="{{ url_for("TranspositionCipher") }}">Transposition Cipher</a></li>
         		<li><a href="{{ url_for("VigenereCipher") }}">Vigenere Cipher</a></li>
-        		
         	</ul>
 		</nav>
 
@@ -37,27 +36,39 @@
 		<section id="content" class="column-right">
 
 		<article>
-			<h2>Caesar Cipher</h2>
+			<h2>Affine Cipher</h2>
 			<br><br>
-			<blockquote><p>The Caesar cipher is one of the earliest known, simplest and very weak cipher. It is a type of substitution cipher in which each letter is 'shifted' a certain number of places down the alphabet. <br> For eg., with a shift of 1, A would be replaced by B, B would become C, and so on. <br> The method is named after Julius Caesar, who apparently used it with a shift of three to communicate with generals to protect messages of military significance. <br><br></p></blockquote>
-			
-			<form name="startpage" method="POST" action="{{ url_for("caesar") }}">
+			<blockquote><p>The Affine cipher is a monoalphabetic substitution cipher and it can be the exact same as a standard Caesarian shift when "a" is 1. Mathematically, it is represented as e(x) = (ax + b) mod m. Due to only 312 possible keys, this cipher is unsecure.<br><br></p></blockquote>
+			<form name="startpage" method="POST" action="{{ url_for("affine") }}">
 				<input class = "Plaintext" name = "plain" type = "text" id = "plain" placeholder = "Plaintext/Ciphertext"/>
-				<input class = "Key" name = "key" type = "number" id = "key" placeholder = "Number Key" />
+				<select name="key1" id="key1" class = "Key">
+					<option value="1">1</option>
+					<option value="3">3</option>
+					<option value="5">5</option>
+					<option value="7">7</option>
+					<option value="9">9</option>
+					<option value="11">11</option>
+					<option value="15">15</option>
+					<option value="17">17</option>
+					<option value="19">19</option>
+					<option value="21">21</option>
+					<option value="23">23</option>
+					<option value="25">25</option>
+				</select>
+				<input class = "Key" name = "key2" type = "number" id = "key" placeholder = "Number Key 2" />
 				<button type="submit" name="submit" id="encrypt" value="encrypt" class="btn1">Encrypt</button>
 				<button type="submit" name="submit" id="decrypt" value="decrypt" class="btn2">Decrypt</button>
 			</form>
 			<br><br><br>
 			<h3>How to use the above tool?</h3>
-			<blockquote><p>To encrypt or decrypt enter your plaintext or ciphertext respectively. Chose a desired key from 0 to 25 and press the encrypt or decrypt button accordingly.</p></blockquote>
-
+			<blockquote><p>To encrypt or decrypt enter your plaintext or ciphertext respectively. Chose a desired Key key 1 from the dropdown such that it is always coprime to length of the alphabet and then chose Key key 2. Press the encrypt or decrypt button accordingly. </p></blockquote>
 		</article>
 
-		
+
 		<div id="hometab">
 			<nav id="headtitle">
-				<h4><a target="_blank" href="https://en.wikipedia.org/wiki/Caesar_cipher">Learn More</a></h4>
-				<h3><a target="_blank" href="https://github.com/ayushggarg/cryptowebsite/blob/master/Caesar.py">Source Code</a></h3>
+				<h4><a target="_blank" href="https://en.wikipedia.org/wiki/Affine_cipher">Learn More</a></h4>
+				<h3><a target="_blank" href="https://github.com/ayushggarg/cryptowebsite/blob/master/Affine.py">Source Code</a></h3>
 			</nav>
 		</div>
 
@@ -66,7 +77,7 @@
 		<div class="clear"></div>
 
 	</section>
-	
+
 
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-	<title>eNdE</title>
+	<title>Reverse Cipher</title>
 	<link rel="stylesheet" href="{{ url_for('static',filename='ende.css') }}" type="text/css" type="text/css" />
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
@@ -18,10 +18,17 @@
 
 		<nav id="mainnav">
 			<ul>
-        		<li><a href="{{ url_for("eNdE") }}">Home</a></li>
-           		<li><a href="{{ url_for("CaesarCipher") }}">CaesarCipher</a></li>
+        		<li><a href="{{ url_for("FrequencyAnalysis") }}">Frequency Analysis</a></li>
+        		<li><a href="{{ url_for("AffineCipher") }}">Affine Cipher</a></li>
+        		<li><a href="{{ url_for("AtbashCipher") }}">Atbash</a></li>
+        		<li><a href="{{ url_for("BaseCipher") }}">Base64</a></li>
+           		<li><a href="{{ url_for("CaesarCipher") }}">Caesar Cipher</a></li>
+           		<li><a href="{{ url_for("LetterCipher") }}">Letter Number</a></li>
+           		<li><a href="{{ url_for("MorseCipher") }}">Morse Code</a></li>
+           		<li><a href="{{ url_for("OTPCipher") }}">One Time Pad</a></li>
            		<li class="selected-item"><a href="{{ url_for("ReverseCipher") }}">Reverse Cipher</a></li>
         		<li><a href="{{ url_for("TranspositionCipher") }}">Transposition Cipher</a></li>
+        		<li><a href="{{ url_for("VigenereCipher") }}">Vigenere Cipher</a></li>
         		
         	</ul>
 		</nav>
@@ -32,21 +39,23 @@
 		<article>
 			<h2>Reverse Cipher</h2>
 			<br><br>
-			<blockquote><p>The reverse cipher encrypts a message by printing it in reverse order. So “Hello world!” encrypts to “!dlrow olleH”. To decrypt, you simply reverse the reversed message to get the original message. The encryption and decryption steps are the same. <br><br> The reverse cipher is a very weak cipher. Just by looking at its ciphertext you can figure out it is just in reverse order. .syas ti tahw tuo erugif llits ylbaborp nac uoy ,detpyrcne si siht hguoht neve ,elpmaxe roF <br><br></p></blockquote>
-			<br><br>
+			<blockquote><p>The reverse cipher encrypts a message by printing it in reverse order. So “Hello world!” encrypts to “!dlrow olleH”. To decrypt, you simply reverse the reversed message to get the original message. The encryption and decryption steps are the same. <br> The reverse cipher is a very weak cipher. Just by looking at its ciphertext you can figure out it is just in reverse order. <br> .syas ti tahw tuo erugif llits ylbaborp nac uoy ,detpyrcne si siht hguoht neve ,elpmaxe roF <br><br></p></blockquote>
 			<form name="startpage" method="POST" action="{{ url_for("reverse") }}">
-				<input name = "Plain" type = "text" id = "plain" placeholder = "Plaintext"/>
-				<input name = "Cipher" type = "text" id = "cipher" placeholder = "Ciphertext"/>
-				<input name = "Key" type = "number" id = "key" placeholder = "Key" disabled="" />
-				<button type="submit" name="submit" id="encrypt" value="encrypt" class="btn btn-default">Encrypt</button>
-				<button type="submit" name="submit" id="decrypt" value="decrypt" class="btn btn-default">Decrypt</button>
+				<input class = "Plaintext" name = "plain" type = "text" id = "plain" placeholder = "Plaintext/Ciphertext"/>
+				<input class = "Key" type = "number" id = "key" placeholder = "Key" disabled="" />
+				<button type="submit" name="submit" id="encrypt" value="encrypt" class="btn1">Encrypt/Decrypt</button>
 			</form>
+			<br><br><br>
+			<h3>How to use the above tool?</h3>
+			<blockquote><p>To encrypt or decrypt the text, just enter the text in the given field and press the encrypt/decrypt button. <br></p></blockquote>
 		</article>
 
-		
-		<footer class="clear">
-			<p></p>
-		</footer>
+		<div id="hometab">
+			<nav id="headtitle">
+				<h3><a target="_blank" href="https://github.com/ayushggarg/cryptowebsite/blob/master/Reverse.py">Source Code</a></h3>
+			</nav>
+		</div>
+
 
 	</section>
 

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-	<title>eNdE</title>
+	<title>Vigenere Cipher</title>
 	<link rel="stylesheet" href="{{ url_for('static',filename='ende.css') }}" type="text/css" type="text/css" />
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
@@ -18,10 +18,17 @@
 
 		<nav id="mainnav">
 			<ul>
-        		<li><a href="{{ url_for("eNdE") }}">Home</a></li>
-           		<li class="selected-item"><a href="{{ url_for("CaesarCipher") }}">CaesarCipher</a></li>
+        		<li><a href="{{ url_for("FrequencyAnalysis") }}">Frequency Analysis</a></li>
+        		<li><a href="{{ url_for("AffineCipher") }}">Affine Cipher</a></li>
+        		<li><a href="{{ url_for("AtbashCipher") }}">Atbash</a></li>
+        		<li><a href="{{ url_for("BaseCipher") }}">Base64</a></li>
+           		<li><a href="{{ url_for("CaesarCipher") }}">Caesar Cipher</a></li>
+           		<li><a href="{{ url_for("LetterCipher") }}">Letter Number</a></li>
+           		<li><a href="{{ url_for("MorseCipher") }}">Morse Code</a></li>
+           		<li><a href="{{ url_for("OTPCipher") }}">One Time Pad</a></li>
            		<li><a href="{{ url_for("ReverseCipher") }}">Reverse Cipher</a></li>
         		<li><a href="{{ url_for("TranspositionCipher") }}">Transposition Cipher</a></li>
+        		<li class="selected-item"><a href="{{ url_for("VigenereCipher") }}">Vigenere Cipher</a></li>
         		
         	</ul>
 		</nav>
@@ -30,23 +37,27 @@
 		<section id="content" class="column-right">
 
 		<article>
-			<h2>Caesar Cipher</h2>
+			<h2>Vigenere Cipher</h2>
 			<br><br>
-			<blockquote><p>The Caesar cipher is one of the earliest known and simplest ciphers. It is a type of substitution cipher in which each letter in the plaintext is 'shifted' a certain number of places down the alphabet. For example, with a shift of 1, A would be replaced by B, B would become C, and so on. The method is named after Julius Caesar, who apparently used it to communicate with his generals. <br><br> To encode something, just pick an N and type in your message. To decode something, subtract the encryption N from 26 and it should be decoded for you. <br><br></p></blockquote>
-			<br><br>
-			<form name="startpage" method="POST" action="{{ url_for("caesar") }}">
-				<input name = "Plain" type = "text" id = "plain" placeholder = "Plaintext"/>
-				<input name = "Cipher" type = "text" id = "cipher" placeholder = "Ciphertext"/>
-				<input name = "Key" type = "number" id = "key" placeholder = "Key" />
-				<button type="submit" name="submit" id="encrypt" value="encrypt" class="btn btn-default">Encrypt</button>
-				<button type="submit" name="submit" id="decrypt" value="decrypt" class="btn btn-default">Decrypt</button>
+			<blockquote><p> The Vigenère cipher is similar to the Caesar cipher, except with multiple keys. Because it uses more than one set of substitutions. It is also called a polyalphabetic substitution cipher <br> For the Vigenère cipher, we will use a letter key. The letter A will be used for key 0. The letter B will be used for key 1, and so on up to Z for the key 25. <br><br></p></blockquote>
+			<form name="startpage" method="POST" action="{{ url_for("vigenere") }}">
+				<input class = "Plaintext" name = "plain" type = "text" id = "plain" placeholder = "Plaintext/Ciphertext"/>
+				<input class = "Key" name = "key" type = "text" id = "key" placeholder = "Text Key" />
+				<button type="submit" name="submit" id="encrypt" value="encrypt" class="btn1">Encrypt</button>
+				<button type="submit" name="submit" id="decrypt" value="decrypt" class="btn2">Decrypt</button>
 			</form>
+			<br><br><br>
+			<h3>How to use the above tool?</h3>
+			<blockquote><p>To encrypt or decrypt enter your plaintext or ciphertext respectively. Chose a desired text keyword and press the encrypt or decrypt button accordingly. </p></blockquote>
 		</article>
 
 		
-		<footer class="clear">
-			<p></p>
-		</footer>
+		<div id="hometab">
+			<nav id="headtitle">
+				<h4><a target="_blank" href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Learn More</a></h4>
+				<h3><a target="_blank" href="https://github.com/ayushggarg/cryptowebsite/blob/master/Vigenere.py">Source Code</a></h3>
+			</nav>
+		</div>
 
 	</section>
 
