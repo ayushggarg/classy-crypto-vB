@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import flask
+import webbrowser
 from Atbash import Atbash
 from Affine import Affine
 from Base64 import encryptBase, decryptBase
@@ -12,6 +13,9 @@ from OTP import OTP
 from Reverse import Reverse
 from Transposition import TranspositionEn, TranspositionDy
 from Vigenere import encryptVigenere, decryptVigenere
+
+url = "http://127.0.0.1:5000/"
+webbrowser.open_new_tab(url) 
 
 app = flask.Flask(__name__)
 
